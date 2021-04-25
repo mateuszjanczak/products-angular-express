@@ -1,20 +1,8 @@
 <router-outlet> </router-outlet>
 <div class="container">
   <div class="row g-3">
-    <div class="col-3">
-      <product></product>
-    </div>
-    <div class="col-3">
-      <product></product>
-    </div>
-    <div class="col-3">
-      <product></product>
-    </div>
-    <div class="col-3">
-      <product></product>
-    </div>
-    <div class="col-3">
-      <product></product>
+    <div *ngFor="let product of products" class="col-4">
+      <product [product]="product"></product>
     </div>
   </div>
 </div>
