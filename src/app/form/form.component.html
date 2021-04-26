@@ -1,8 +1,32 @@
-<form [formGroup]="productForm">
-  <div class="example-container">
+<div class="container text-center">
+
+  <div>
     <mat-form-field appearance="fill">
       <mat-label>Name</mat-label>
-      <input matInput formControlName="name" required>
+      <input matInput type="text" [formControl]="name"/>
     </mat-form-field>
   </div>
-</form>
+
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <input matInput type="text" [formControl]="description"/>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Price</mat-label>
+      <input matInput type="text" [formControl]="price"/>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Image</mat-label>
+      <input matInput type="text" [formControl]="image"/>
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button>Save</button>
+</div>
