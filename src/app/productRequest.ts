@@ -1,5 +1,4 @@
-export interface Product {
-  _id: string;
+export interface ProductRequest {
   name: string;
   description: string;
   price: number;

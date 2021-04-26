@@ -15,13 +15,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { ListComponent } from './list/list.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
+import { ElementComponent } from './element/element.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     FormComponent,
-    ListComponent
+    ListComponent,
+    ElementComponent
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,7 @@ export class ListComponent implements OnInit {
   }
 
   loadProducts(): void {
-    this.httpService.getRequest('https://crudcrud.com/api/984288ef31d04a7f822f4d94f05bf11a/products')
+    this.httpService.getRequest('https://crudcrud.com/api/b1ac35afed314dd689235fbba503cd26/products')
       .subscribe((response) => {
         this.products = response;
       });
