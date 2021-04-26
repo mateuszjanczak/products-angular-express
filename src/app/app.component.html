@@ -1,8 +1,11 @@
-<router-outlet> </router-outlet>
-<div class="container">
-  <div class="row g-3">
-    <div *ngFor="let product of products" class="col-4">
-      <product [product]="product"></product>
+<mat-toolbar class="mb-5">
+  <mat-toolbar-row>
+    <h1>Products</h1>
+    <span class="menu-spacer"></span>
+    <div class="mx-5">
+      <a mat-button [routerLink]="'/list'"> List </a>
+      <a mat-button [routerLink]="'/form'"> Form </a>
     </div>
-  </div>
-</div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet> </router-outlet>

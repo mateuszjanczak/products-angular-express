@@ -9,11 +9,18 @@ import {MatButtonModule} from '@angular/material/button';
 import { ProductComponent } from './product/product.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { FormComponent } from './form/form.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ListComponent } from './list/list.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    FormComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +29,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatButtonModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
