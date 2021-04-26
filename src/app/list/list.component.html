@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row g-3">
     <div *ngFor="let product of products" class="col-4">
-      <product [product]="product"></product>
+      <product [product]="product" (removeEvent)="handleRemoveEvent($event)"></product>
     </div>
   </div>
 </div>

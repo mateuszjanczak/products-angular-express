@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from '../product';
 import {HttpService} from '../http.service';
+import {ProductsService} from '../products.service';
 
 @Component({
   selector: 'app-list',
@@ -12,7 +13,7 @@ export class ListComponent implements OnInit {
   title = 'products';
   products: Product[] = [];
 
-  constructor(private httpService: HttpService) {
+  constructor(private productService: ProductsService) {
   }
 
   ngOnInit(): void {
@@ -20,10 +21,14 @@ export class ListComponent implements OnInit {
   }
 
   loadProducts(): void {
-    this.httpService.getRequest('https://crudcrud.com/api/b1ac35afed314dd689235fbba503cd26/products')
+    this.productService.loadProducts()
       .subscribe((response) => {
         this.products = response;
       });
   }
 
+  handleRemoveEvent(id: string): void {
+    this.productService.removeProduct(id);
+    this.loadProducts();
+  }
 }

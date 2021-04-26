@@ -28,6 +28,12 @@ export class HttpService {
     );
   }
 
+  deleteRequest(url: string): Observable<any> {
+    return this.http.delete(url).pipe(
+      catchError(this.handleError)
+    );
+  }
+
   handleError(error: HttpErrorResponse): Observable<never> {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.

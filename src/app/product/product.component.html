@@ -11,6 +11,6 @@
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="warn" [routerLink]="['/element/', product._id]">VIEW</button>
-    <button mat-raised-button color="warn">REMOVE</button>
+    <button mat-raised-button color="warn" (click)="sendRemoveEvent()">REMOVE</button>
   </mat-card-actions>
 </mat-card>

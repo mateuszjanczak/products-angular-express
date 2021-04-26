@@ -3,6 +3,7 @@ import {FormControl} from '@angular/forms';
 import {HttpService} from '../http.service';
 import {Router} from '@angular/router';
 import {ProductRequest} from '../productRequest';
+import {ProductsService} from '../products.service';
 
 @Component({
   selector: 'app-form',
@@ -16,7 +17,7 @@ export class FormComponent implements OnInit {
   price = new FormControl('');
   image = new FormControl('');
 
-  constructor(private httpService: HttpService, private router: Router) { }
+  constructor(private productsService: ProductsService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -29,8 +30,7 @@ export class FormComponent implements OnInit {
       image: this.image.value
     };
 
-    this.httpService.postRequest('https://crudcrud.com/api/b1ac35afed314dd689235fbba503cd26/products', productRequest).subscribe();
-
+    this.productsService.saveProduct(productRequest);
     this.router.navigateByUrl('list').then(r => console.log(r));
   }
 }
